@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32a93fd09206c2449cc4f4dab611c46, type: 3}
+  m_Script: {fileID: 11500000, guid: 40cf1a24ffbbf0740a4f401630a60e99, type: 3}
   m_Name: Character
   m_EditorClassIdentifier: 
   _characterPrefab: {fileID: 1482908914636762800, guid: 2a4b063e34f36d64691ecf355ddf4898, type: 3}
-  _movementSpeed: 15
-  _rotationSpeed: 500
-  _jumpHeight: 1.5
+  _movementSpeed: 5
+  _rotationSpeed: 1000
+  _health: 0
+  _damageResistance: 0

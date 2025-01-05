@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044e1b9888bcf704781f055c5086ead8, type: 3}
+  m_Name: BallShoot
+  m_EditorClassIdentifier: 
+  _type: 1
+  _parameters:
+  - _skillParameterType: 0
+    _value: 0
+  - _skillParameterType: 1
+    _value: 0
+  - _skillParameterType: 2
+    _value: 0
+  - _skillParameterType: 3
+    _value: 0
+  - _skillParameterType: 8
+    _value: 0
+  _bulletPrefab: {fileID: 0}

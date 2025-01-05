@@ -6,10 +6,10 @@ public class CharacterCreator
 {
     [SerializeField] private Transform _characterSpawnPos;
 
-    private BasicCharacterConfig _characterConfig;
+    private CharacterConfig _characterConfig;
     private PlayerController _character;
 
-    public void Init(BasicCharacterConfig characterConfig)
+    public void Init(CharacterConfig characterConfig)
     {
         _characterConfig = characterConfig;
     }

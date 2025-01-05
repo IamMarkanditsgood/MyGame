@@ -1,6 +1,6 @@
 ﻿public class CharacterDataManager
 {
-    public CharacterData ConfigureCharacterData(BasicCharacterConfig basicCharacterConfig)
+    public CharacterData ConfigureCharacterData(CharacterConfig basicCharacterConfig)
     {
         CharacterData characterData = new CharacterData();
 

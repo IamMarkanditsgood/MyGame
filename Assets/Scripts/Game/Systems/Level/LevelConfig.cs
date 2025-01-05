@@ -7,8 +7,8 @@ using UnityEngine.Experimental.GlobalIllumination;
 public class LevelConfig : ScriptableObject
 {
     [SerializeField] private SceneConfig _sceneConfig;
-    [SerializeField] private BasicCharacterConfig _characterConfig;
+    [SerializeField] private CharacterConfig _characterConfig;
 
     public SceneConfig SceneConfig => _sceneConfig;
-    public BasicCharacterConfig CharacterConfig => _characterConfig; 
+    public CharacterConfig CharacterConfig => _characterConfig; 
 }
