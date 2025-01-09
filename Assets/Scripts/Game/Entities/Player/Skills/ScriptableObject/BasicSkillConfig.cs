@@ -20,7 +20,7 @@ public class BasicSkillConfig : ScriptableObject
                 return parameter.Value;
             }    
         }
-        Debug.LogWarning("There is no this type of parameter!");
+        Debug.LogWarning($"There is no {skillParameterType} type of parameter!");
         return 0;
     }
 }

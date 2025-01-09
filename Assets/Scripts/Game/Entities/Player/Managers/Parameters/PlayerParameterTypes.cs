@@ -4,8 +4,8 @@ using UnityEngine;
 
 public enum PlayerParameterTypes
 {
-    Speed,
-    Rotation,
+    MovementSpeed,
+    RotationSpeed,
     BasicDamage,
     Health,
     DamageResistance,

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private CharacterController _characterController;
 
+    [SerializeField] private PlayerSkillsManager _playerSkillsManager;
+
     private PlayerInputSystem _playerInputSystem = new PlayerInputSystem();
     private PlayerMovementManager _playerMovementManager = new PlayerMovementManager();
     private PlayerRotationManager _playerRotationManager = new PlayerRotationManager();
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private PlayerParametersManager _characterParametersManager = new PlayerParametersManager();
 
     private CharacterData _characterData = new CharacterData();
+    private CharacterConfig _characterConfig;
 
     private void Start()
     {
@@ -33,7 +35,9 @@ public class PlayerController : MonoBehaviour
 
     public void Init(CharacterConfig characterConfig)
     {
-        _characterData = _characterDataManager.ConfigureCharacterData(characterConfig);
+        _characterConfig = characterConfig;
+
+        _characterData = _characterDataManager.ConfigureCharacterData(_characterConfig);
 
         InitManagers();
     }
@@ -41,9 +45,10 @@ public class PlayerController : MonoBehaviour
     private void InitManagers()
     {
         _playerInputSystem.Init();
-        _playerMovementManager.Init(_characterController, _characterData.MovementSpeed, gameObject.transform);
-        _playerRotationManager.Init(gameObject.transform, _characterData.RotationSpeed);
+        _playerMovementManager.Init(_characterController, _characterData.GetParameter(PlayerParameterTypes.MovementSpeed), gameObject.transform);
+        _playerRotationManager.Init(gameObject.transform, _characterData.GetParameter(PlayerParameterTypes.RotationSpeed));
         _characterParametersManager.Init(ref _characterData);
+        _playerSkillsManager.Init(_characterConfig.SkillsCollection, _characterData.Skills);
     }
 
     private void Subscribe()

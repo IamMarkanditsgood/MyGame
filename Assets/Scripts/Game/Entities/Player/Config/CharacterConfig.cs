@@ -1,17 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "Character", menuName = "ScriptableObjects/Character/Character/Player", order = 1)]
-public class CharacterConfig : ScriptableObject
+public class CharacterConfig : SerializedScriptableObject
 {
     [SerializeField] private GameObject _characterPrefab;
-    [SerializeField] private float _movementSpeed;
-    [SerializeField] private float _rotationSpeed;
-    [SerializeField] private float _health;
-    [SerializeField] private float _damageResistance;
+    [SerializeField] private List<SkillTypes> _skills;
+    [SerializeField] private Dictionary<PlayerParameterTypes, float> _parameters;
+    [SerializeField] private Dictionary<SkillTypes, BasicSkillConfig> _skillsCollection;
 
     public GameObject CharacterPrefab => _characterPrefab;
-    public float MovementSpeed => _movementSpeed;
-    public float RotationSpeed => _rotationSpeed;
-    public float Health => _health;
-    public float DamageResistance => _damageResistance;
+    public List<SkillTypes> Skills => _skills;
+    public Dictionary<PlayerParameterTypes, float> Parameters => _parameters;
+    public Dictionary<SkillTypes, BasicSkillConfig> SkillsCollection => _skillsCollection;
 }

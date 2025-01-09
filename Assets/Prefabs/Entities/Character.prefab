@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterController: {fileID: 4019496002431444664}
+  _playerSkillsManager:
+    _skills: 
 --- !u!1 &5040085193648719440
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,10 +33,21 @@ public class PlayerParametersManager
     }
     private void ModifyPercent(PlayerParameterTypes playerParameterTypes, float percent)
     {
+        float parameter = _characterData.GetParameter(playerParameterTypes);
+        float adjustment = parameter * (percent / 100f);
 
+        parameter += adjustment;
+
+        _characterData.SetParameter(playerParameterTypes, parameter);
+        Debug.Log($"parameter: {playerParameterTypes} modified and now equal {parameter}");
     }
-    private void ModifyAmount(PlayerParameterTypes playerParameterTypes, float percent)
+    private void ModifyAmount(PlayerParameterTypes playerParameterTypes, float amount)
     {
-        
+        float parameter = _characterData.GetParameter(playerParameterTypes);
+
+        parameter += amount;
+
+        _characterData.SetParameter(playerParameterTypes, parameter);
+        Debug.Log($"parameter: {playerParameterTypes} modified and now equal {parameter}");
     }
 }

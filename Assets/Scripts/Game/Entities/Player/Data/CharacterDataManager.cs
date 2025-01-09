@@ -5,8 +5,8 @@
         CharacterData characterData = new CharacterData();
 
         characterData.CharacterPrefab = basicCharacterConfig.CharacterPrefab;
-        characterData.MovementSpeed = basicCharacterConfig.MovementSpeed;
-        characterData.RotationSpeed = basicCharacterConfig.RotationSpeed;
+        characterData.Skills = basicCharacterConfig.Skills;
+        characterData.Parameters = basicCharacterConfig.Parameters;
 
         return characterData;
 
