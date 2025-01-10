@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private LevelCreator _levelCreator;
+    [SerializeField] private PoolObjectManager _poolObjectManager;
 
     [SerializeField] private LevelConfig _levelConfig;
 
@@ -15,6 +16,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        _levelCreator.CreateLevel();
+        _poolObjectManager.InitPoolObjects();
+        _levelCreator.CreateLevel();  
     }
 }

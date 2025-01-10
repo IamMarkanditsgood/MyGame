@@ -11,7 +11,6 @@ public class BoosterSkill : BasicBuffSkill
         var parametersToBuff = new[]
         {
             PlayerParameterTypes.Health,
-            PlayerParameterTypes.BasicDamage,
             PlayerParameterTypes.DamageResistance,
             PlayerParameterTypes.MovementSpeed
         };

@@ -6,7 +6,6 @@ public enum PlayerParameterTypes
 {
     MovementSpeed,
     RotationSpeed,
-    BasicDamage,
     Health,
     DamageResistance,
 }

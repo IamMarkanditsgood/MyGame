@@ -21,7 +21,7 @@ MonoBehaviour:
   - _skillParameterType: 2
     _value: 1
   - _skillParameterType: 5
-    _value: 10
+    _value: 5
   - _skillParameterType: 8
-    _value: 25
-  _bulletPrefab: {fileID: 0}
+    _value: 5
+  _bulletConfig: {fileID: 11400000, guid: 72e18409a1a812d49a60f8189c1eaf71, type: 2}

@@ -3,7 +3,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Character", menuName = "ScriptableObjects/Character/Character/Player", order = 1)]
+[CreateAssetMenu(fileName = "Character", menuName = "ScriptableObjects/Character/Player", order = 1)]
 public class CharacterConfig : SerializedScriptableObject
 {
     [SerializeField] private GameObject _characterPrefab;

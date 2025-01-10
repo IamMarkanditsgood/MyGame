@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New CharacterSkill", menuName = "ScriptableObjects/Character/Skills/ShootingSkill")]
 public class ShootingSkillConfig : BasicSkillConfig
 {
-    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private BulletConfig _bulletConfig;
 
-    public GameObject BulletPrefab => _bulletPrefab;
+    public BulletConfig BulletConfig => _bulletConfig;
 }
