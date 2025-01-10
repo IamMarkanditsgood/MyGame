@@ -24,5 +24,13 @@ public class KeyboardInputSystem : IInputable
         {
             InputEvents.InteractPressed();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            InputEvents.SkillPressed(2);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            InputEvents.SkillPressed(3);
+        }
     }
 }

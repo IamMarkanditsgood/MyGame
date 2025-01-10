@@ -16,3 +16,5 @@ MonoBehaviour:
   _parameters:
   - _skillParameterType: 10
     _value: 10
+  - _skillParameterType: 1
+    _value: 2

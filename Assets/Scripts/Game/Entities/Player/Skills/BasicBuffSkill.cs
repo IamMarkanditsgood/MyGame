@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class BasicBuffSkill : BasicSkill
 {
-    public override void UseSkill()
+    public override void ActivateSkill()
     {
         BuffPlayer();
     }

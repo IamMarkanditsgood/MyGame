@@ -5,7 +5,7 @@ using UnityEngine;
 public enum SkillParameterType 
 {
     Damage,
-    Reload,
+    Recharge,
     Delay,
     Distance,
     FieldRadius,

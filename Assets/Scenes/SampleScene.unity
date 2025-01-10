@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43200063}
   - component: {fileID: 43200064}
+  - component: {fileID: 43200065}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -174,6 +175,18 @@ MonoBehaviour:
       _characterSpawnPos: {fileID: 1565990692}
     _characterCamera: {fileID: 818817390}
   _levelConfig: {fileID: 11400000, guid: 7cd51ac2ac8b22b4296da809c4cd2320, type: 2}
+--- !u!114 &43200065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43200062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e8195909a8ed447bee638acea5df8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &194808328
 GameObject:
   m_ObjectHideFlags: 0

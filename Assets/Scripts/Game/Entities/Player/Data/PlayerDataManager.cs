@@ -1,8 +1,8 @@
-﻿public class CharacterDataManager
+﻿public class PlayerDataManager
 {
-    public CharacterData ConfigureCharacterData(CharacterConfig basicCharacterConfig)
+    public CharacterData ConfigureCharacterData(CharacterConfig basicCharacterConfig, CharacterData oldCharacterData)
     {
-        CharacterData characterData = new CharacterData();
+        CharacterData characterData = oldCharacterData;
 
         characterData.CharacterPrefab = basicCharacterConfig.CharacterPrefab;
         characterData.Skills = basicCharacterConfig.Skills;

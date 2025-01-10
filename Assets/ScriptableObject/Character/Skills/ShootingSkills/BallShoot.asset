@@ -15,13 +15,13 @@ MonoBehaviour:
   _type: 1
   _parameters:
   - _skillParameterType: 0
-    _value: 0
+    _value: 10
   - _skillParameterType: 1
-    _value: 0
+    _value: 2
   - _skillParameterType: 2
-    _value: 0
-  - _skillParameterType: 3
-    _value: 0
+    _value: 1
+  - _skillParameterType: 5
+    _value: 10
   - _skillParameterType: 8
-    _value: 0
+    _value: 25
   _bulletPrefab: {fileID: 0}

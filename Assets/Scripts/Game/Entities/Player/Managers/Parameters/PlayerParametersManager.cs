@@ -11,13 +11,17 @@ public class PlayerParametersManager
         _characterData = characterData;
         Subscribe();
     }
+    public void Disable()
+    {
+        UnSubscribe();
+    }
 
     private void Subscribe()
     {
         CharacterEvents.OnPlayerParameterChanged += ModifyParameter;
     }
 
-    public void UnSubscribe()
+    private void UnSubscribe()
     {
         CharacterEvents.OnPlayerParameterChanged -= ModifyParameter;
     }

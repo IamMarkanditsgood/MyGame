@@ -5,20 +5,17 @@ public static class InputEvents
 {
     public static event Action<Vector2> OnMovementPressed;
     public static event Action<Vector2> OnMouseMoved;
-    public static event Action OnMainSkillPressed;
-    public static event Action OnSupportSkillPressed;
+
+    public static event Action<int> OnSkillPressed;
+
     public static event Action OnJumpPressed;
     public static event Action OnSprintPressed;
     public static event Action OnCrouchPressed;
     public static event Action OnInteractPressed;
 
-    public static void MainSkillPressed()
+    public static void SkillPressed(int skillIndex)
     {
-        OnMainSkillPressed?.Invoke();
-    }
-    public static void SupportSkillPressed()
-    {
-        OnSupportSkillPressed?.Invoke();
+        OnSkillPressed?.Invoke(skillIndex);
     }
     public static void JumpPressed()
     {

@@ -52,7 +52,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 4
-      Data: 5
+      Data: 25
     - Name: 
       Entry: 8
       Data: 
@@ -76,7 +76,7 @@ MonoBehaviour:
       Data: 2
     - Name: $v
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -88,7 +88,7 @@ MonoBehaviour:
       Data: 3
     - Name: $v
       Entry: 4
-      Data: 100
+      Data: 110
     - Name: 
       Entry: 8
       Data: 
@@ -173,4 +173,4 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _characterPrefab: {fileID: 1482908914636762800, guid: 2a4b063e34f36d64691ecf355ddf4898, type: 3}
-  _skills: 0400000005000000
+  _skills: 010000000400000005000000

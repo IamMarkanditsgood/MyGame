@@ -6,4 +6,6 @@ using UnityEngine;
 public class ShootingSkillConfig : BasicSkillConfig
 {
     [SerializeField] private GameObject _bulletPrefab;
+
+    public GameObject BulletPrefab => _bulletPrefab;
 }

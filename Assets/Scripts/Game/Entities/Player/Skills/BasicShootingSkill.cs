@@ -5,9 +5,12 @@ using UnityEngine;
 public abstract class BasicShootingSkill : BasicSkill
 {
     [SerializeField] protected Transform _spawnPos;
-    [SerializeField] protected GameObject _prefab;
 
-    public override void UseSkill()
+    public void Init(Transform shootingPos)
+    {
+        _spawnPos = shootingPos;
+    }
+    public override void ActivateSkill()
     {
         Shoot();
     }

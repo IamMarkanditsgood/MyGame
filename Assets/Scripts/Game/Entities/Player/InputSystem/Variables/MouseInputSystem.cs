@@ -22,12 +22,12 @@ public class MouseInputSystem : IInputable
     {
         if (Input.GetMouseButtonDown(0))// Pressed left-click.
         {
-            InputEvents.MainSkillPressed();
+            InputEvents.SkillPressed(0);
         }
 
         if (Input.GetMouseButtonDown(1))// Pressed right-click
         {
-            InputEvents.SupportSkillPressed();
+            InputEvents.SkillPressed(1);
         }
     }
 }

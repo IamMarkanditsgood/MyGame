@@ -14,5 +14,5 @@ public class CharacterConfig : SerializedScriptableObject
     public GameObject CharacterPrefab => _characterPrefab;
     public List<SkillTypes> Skills => _skills;
     public Dictionary<PlayerParameterTypes, float> Parameters => _parameters;
-    public Dictionary<SkillTypes, BasicSkillConfig> SkillsCollection => _skillsCollection;
+    public Dictionary<SkillTypes, BasicSkillConfig> skillsCollection => _skillsCollection;
 }
