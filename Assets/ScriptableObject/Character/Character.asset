@@ -19,6 +19,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8f12c8d65074dff4ead69900127169d2, type: 2}
     - {fileID: 11400000, guid: c20eb47762fabe8478e1bf878329acf8, type: 2}
     - {fileID: 11400000, guid: ff137fec5428da845b45830f6a2dc226, type: 2}
+    - {fileID: 11400000, guid: 0460c477f6db2e244a8c65fed47ba70d, type: 2}
+    - {fileID: 11400000, guid: 819b7af9f4f9a8045bc14bc19787c631, type: 2}
+    - {fileID: 11400000, guid: 4491330773d23604a81823e2db36200f, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -73,10 +76,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: $v
       Entry: 4
-      Data: 110
+      Data: 100
     - Name: 
       Entry: 8
       Data: 
@@ -85,10 +88,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 4
+      Data: 3
     - Name: $v
       Entry: 4
-      Data: 0
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -117,7 +120,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 6
     - Name: 
       Entry: 7
       Data: 
@@ -155,10 +158,46 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
   _characterPrefab: {fileID: 1482908914636762800, guid: 2a4b063e34f36d64691ecf355ddf4898, type: 3}
-  _skills: 010000000400000005000000
+  _skills: 060000000200000005000000

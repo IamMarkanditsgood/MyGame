@@ -7,6 +7,7 @@ public class PlayerMovementManager
     private float _movementSpeed;
     private Vector3 _velocity;
     private Transform _playerBody;
+    private Vector3 _previousPosition;
 
     private const float gravity = -9.81f;
 
@@ -36,5 +37,22 @@ public class PlayerMovementManager
 
         _velocity.y += gravity * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
+    }
+
+    public void UpdateMovementDirection()
+    {
+        Vector3 currentPosition = _characterController.transform.position;
+        Vector3 movementDirection = (currentPosition - _previousPosition).normalized;
+
+        if (movementDirection.magnitude > 0.01f)
+        {
+            PlayerEvents.ModifyDirection(movementDirection);
+        }
+        else
+        {
+            movementDirection = movementDirection.normalized;
+            PlayerEvents.ModifyDirection(movementDirection);
+        }
+        _previousPosition = currentPosition;
     }
 }

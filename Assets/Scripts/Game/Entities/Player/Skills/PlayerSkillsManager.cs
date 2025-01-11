@@ -8,22 +8,25 @@ public class PlayerSkillsManager
     private List<BasicSkill> _playerSkills = new List<BasicSkill>();
 
     private Transform _shootingPos;
-    private Transform _playerPos;
+    private Transform _characterPos;
 
 
     private Dictionary<SkillTypes, BasicSkillConfig> _skillsCollection;
     private Dictionary<SkillTypes, BasicSkill> _availableSkills = new Dictionary<SkillTypes, BasicSkill>
     {
+        { SkillTypes.Lazer,new Lazer() },
+        { SkillTypes.ShotGun,new ShotGun() },
         { SkillTypes.BallShot,new BulletShot() },
         { SkillTypes.Healer,new HealerSkill() },
-        { SkillTypes.Booster,new BoosterSkill() }
+        { SkillTypes.Booster,new BoosterSkill() },
+        { SkillTypes.Teleporter,new PlayerTeleport() }
     };
 
-    public void Init(Dictionary<SkillTypes, BasicSkillConfig> skillsCollection, List<SkillTypes> skills, Transform playerPos, Transform shootingPos)
+    public void Init(Dictionary<SkillTypes, BasicSkillConfig> skillsCollection, List<SkillTypes> skills, Transform characterPos, Transform shootingPos)
     {
         _skillsCollection = skillsCollection;
         _skills = skills;
-        _playerPos = playerPos;
+        _characterPos = characterPos;
         _shootingPos = shootingPos;
         SetSkills();
     }
@@ -33,6 +36,10 @@ public class PlayerSkillsManager
         foreach (var skill in _playerSkills)
         {
             skill.StopCoroutines();
+        }
+        foreach (var skill in _availableSkills.Values)
+        {
+            skill.OnDisable();
         }
     }
 
@@ -53,6 +60,8 @@ public class PlayerSkillsManager
 
     private void InitSkill(BasicSkill _playerSkill)
     {
+        _playerSkill.Init(_characterPos);
+
         if (_playerSkill is BasicShootingSkill)
         {
             BasicShootingSkill basicShootingSkill = (BasicShootingSkill)_playerSkill;

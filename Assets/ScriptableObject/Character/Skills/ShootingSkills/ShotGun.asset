@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 044e1b9888bcf704781f055c5086ead8, type: 3}
-  m_Name: BallShoot
+  m_Name: ShotGun
   m_EditorClassIdentifier: 
-  _type: 1
+  _type: 2
   _parameters:
   - _skillParameterType: 0
     _value: 10
   - _skillParameterType: 1
     _value: 2
+  - _skillParameterType: 2
+    _value: 0.3
   - _skillParameterType: 5
     _value: 5
   - _skillParameterType: 8
     _value: 5
-  _bulletConfig: {fileID: 11400000, guid: 72e18409a1a812d49a60f8189c1eaf71, type: 2}
+  - _skillParameterType: 7
+    _value: 15
+  - _skillParameterType: 11
+    _value: 90
+  _bulletConfig: {fileID: 11400000, guid: cd166093677f9734ba8ff470699082a9, type: 2}

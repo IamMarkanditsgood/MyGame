@@ -17,9 +17,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CharacterData _characterData;
     private CharacterConfig _characterConfig;
 
+    
+
     private void Update()
     {
         _playerInputSystem.CheckInput();
+        _playerMovementManager.UpdateMovementDirection();
     }
 
     private void OnDestroy()

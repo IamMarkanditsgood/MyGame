@@ -17,7 +17,7 @@ public class BoosterSkill : BasicBuffSkill
 
         foreach (var parameter in parametersToBuff)
         {
-            CharacterEvents.ModifyPlayerParameter(parameter, buffPercent);
+            PlayerEvents.ModifyPlayerParameter(parameter, buffPercent);
         }
     }
 }

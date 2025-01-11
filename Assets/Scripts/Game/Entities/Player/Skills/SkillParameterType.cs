@@ -15,4 +15,5 @@ public enum SkillParameterType
     Speed,
     DebuffPrecent,
     BuffPercent,
+    SpreadAngle,
 }

@@ -18,12 +18,12 @@ public class PlayerParametersManager
 
     private void Subscribe()
     {
-        CharacterEvents.OnPlayerParameterChanged += ModifyParameter;
+        PlayerEvents.OnPlayerParameterChanged += ModifyParameter;
     }
 
     private void UnSubscribe()
     {
-        CharacterEvents.OnPlayerParameterChanged -= ModifyParameter;
+        PlayerEvents.OnPlayerParameterChanged -= ModifyParameter;
     }
 
     private void ModifyParameter(PlayerParameterTypes playerParameterTypes, float amount, bool isPercent)
