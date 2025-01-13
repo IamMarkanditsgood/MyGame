@@ -25,7 +25,7 @@ public class ShotGun : BasicShootingSkill
         float delay = Random.Range(0, maxDelay);
         yield return new WaitForSeconds(delay);
 
-        BulletManager bullet = PoolObjectManager.instant.Bullets.GetComponent();
+        BulletController bullet = PoolObjectManager.instant.Bullets.GetComponent();
 
         bullet.gameObject.transform.position = _spawnPos.position;
 

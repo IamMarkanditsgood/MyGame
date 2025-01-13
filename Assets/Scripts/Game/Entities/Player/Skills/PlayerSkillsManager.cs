@@ -19,7 +19,12 @@ public class PlayerSkillsManager
         { SkillTypes.BallShot,new BulletShot() },
         { SkillTypes.Healer,new HealerSkill() },
         { SkillTypes.Booster,new BoosterSkill() },
-        { SkillTypes.Teleporter,new PlayerTeleport() }
+        { SkillTypes.Teleporter,new PlayerTeleport() },
+        { SkillTypes.Shield,new Shield() },
+        { SkillTypes.Wave,new Wave() },
+        { SkillTypes.Sword,new Swords() },
+        { SkillTypes.Drone,new Drone() },
+        { SkillTypes.Mine,new MineSkill() }
     };
 
     public void Init(Dictionary<SkillTypes, BasicSkillConfig> skillsCollection, List<SkillTypes> skills, Transform characterPos, Transform shootingPos)
@@ -37,7 +42,7 @@ public class PlayerSkillsManager
         {
             skill.StopCoroutines();
         }
-        foreach (var skill in _availableSkills.Values)
+        foreach (var skill in _playerSkills)
         {
             skill.OnDisable();
         }
@@ -50,10 +55,10 @@ public class PlayerSkillsManager
         foreach (var skillType in _skills)
         {
             if (_availableSkills.TryGetValue(skillType, out var skill))
-            {
-                InitSkill(skill);
+            {   
                 _playerSkills.Add(skill);
-                _playerSkills[_playerSkills.Count - 1].SkillConfig = GetSkillConfig(skillType);              
+                _playerSkills[_playerSkills.Count - 1].SkillConfig = GetSkillConfig(skillType);
+                InitSkill(skill);
             }
         }
     }

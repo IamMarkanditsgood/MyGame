@@ -16,4 +16,5 @@ public enum SkillParameterType
     DebuffPrecent,
     BuffPercent,
     SpreadAngle,
+    EnemyLayerIndex,
 }

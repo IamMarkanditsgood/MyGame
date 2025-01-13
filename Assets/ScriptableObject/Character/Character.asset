@@ -22,6 +22,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0460c477f6db2e244a8c65fed47ba70d, type: 2}
     - {fileID: 11400000, guid: 819b7af9f4f9a8045bc14bc19787c631, type: 2}
     - {fileID: 11400000, guid: 4491330773d23604a81823e2db36200f, type: 2}
+    - {fileID: 11400000, guid: dcbdbabd03a8d1d42b2182f0cda73134, type: 2}
+    - {fileID: 11400000, guid: f3a43039ed8f94840a35726724785aa0, type: 2}
+    - {fileID: 11400000, guid: 3560adf84194e284abe0800a4fc77d97, type: 2}
+    - {fileID: 11400000, guid: 0f18a41521a7ebb4ab0cb0a979718629, type: 2}
+    - {fileID: 11400000, guid: b7f321115c3fa9d4c865d91464c722db, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -120,7 +125,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 11
     - Name: 
       Entry: 7
       Data: 
@@ -194,10 +199,70 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 9
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 11
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
   _characterPrefab: {fileID: 1482908914636762800, guid: 2a4b063e34f36d64691ecf355ddf4898, type: 3}
-  _skills: 060000000200000005000000
+  _skills: 0a0000000200000005000000

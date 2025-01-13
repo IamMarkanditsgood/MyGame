@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744751d3f32b06b4e91713c79c57bd14, type: 3}
+  m_Name: Mine
+  m_EditorClassIdentifier: 
+  _type: 11
+  _parameters:
+  - _skillParameterType: 1
+    _value: 5
+  - _skillParameterType: 7
+    _value: 5
+  - _skillParameterType: 2
+    _value: 1
+  - _skillParameterType: 0
+    _value: 1000

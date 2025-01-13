@@ -9,13 +9,17 @@ public class PoolObjectManager : MonoBehaviour
     public static PoolObjectManager instant;
 
     [Header("Prefabs")]
-    [SerializeField] private BulletManager _bulletPref;
+    [SerializeField] private BulletController _bulletPref;
+    [SerializeField] private MineController _minePref;
     [Header("Containers")]
     [SerializeField] private Transform _bulletContainer;
+    [SerializeField] private Transform _minesContainer;
 
-    private ObjectPool<BulletManager> _bullets = new ObjectPool<BulletManager>();
+    private ObjectPool<BulletController> _bullets = new ObjectPool<BulletController>();
+    private ObjectPool<MineController> _mines = new ObjectPool<MineController>();
 
-    public ObjectPool<BulletManager> Bullets => _bullets;
+    public ObjectPool<BulletController> Bullets => _bullets;
+    public ObjectPool<MineController> Mines => _mines;
 
     private void Start()
     {
@@ -28,5 +32,6 @@ public class PoolObjectManager : MonoBehaviour
     public void InitPoolObjects()
     {
         _bullets.InitializePool(_bulletPref, _bulletContainer);
+        _mines.InitializePool(_minePref, _minesContainer);
     }
 }

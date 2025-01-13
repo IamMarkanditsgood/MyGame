@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32ca714e9aacf643ad4f2ef8a75b420, type: 3}
+  m_Name: Drone
+  m_EditorClassIdentifier: 
+  _type: 10
+  _parameters:
+  - _skillParameterType: 1
+    _value: 1
+  - _skillParameterType: 0
+    _value: 5
+  - _skillParameterType: 5
+    _value: 5
+  _objectPref: {fileID: 5934757659258698785, guid: db68d8c051f900548b2aa844472fd7cc, type: 3}

@@ -12,8 +12,8 @@ public class LevelCreator
 
     private LevelConfig _levelConfig;
 
-    private PlayerController _character;
-    private GameObject _scene;
+    public PlayerController Character { get; set; }
+    public GameObject Scene { get; set; }
 
     public void Init(LevelConfig levelConfig)
     {
@@ -25,10 +25,10 @@ public class LevelCreator
 
     public void CreateLevel()
     {
-        _scene = _sceneCreator.CreateScene();
-        _character = _characterCreator.CreateCharacter();
+        Scene = _sceneCreator.CreateScene();
+        Character = _characterCreator.CreateCharacter();
 
-        SetCamera(_character);
+        SetCamera(Character);
     }
 
     private void SetCamera(PlayerController character)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletManager : MonoBehaviour
+public class BulletController : MonoBehaviour
 {
     [SerializeField] private BulletData _bulletData;
     [SerializeField] private BulletConfig _bulletConfig;

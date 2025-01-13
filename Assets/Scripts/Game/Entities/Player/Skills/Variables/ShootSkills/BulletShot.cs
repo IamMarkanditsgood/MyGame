@@ -8,7 +8,7 @@ public class BulletShot : BasicShootingSkill
     {
         ShootingSkillConfig skillConfig = (ShootingSkillConfig) _skillConfig;
 
-        BulletManager bullet = PoolObjectManager.instant.Bullets.GetComponent();
+        BulletController bullet = PoolObjectManager.instant.Bullets.GetComponent();
 
         bullet.gameObject.transform.position = _spawnPos.position;
         bullet.gameObject.transform.rotation = _spawnPos.rotation;
