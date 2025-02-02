@@ -6,7 +6,7 @@ public class CoroutineServices : MonoBehaviour, ICoroutineServices
 {
     public static CoroutineServices instance;
 
-    private void Start()
+    public void Init()
     {
         if (instance == null)
         {

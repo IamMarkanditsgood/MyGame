@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GamePlayManager : MonoBehaviour
 {
-    private PlayerController _player;
+    [SerializeField] private SwarmController _swarmController;
+
+    private PlayerController _player; 
 
     public void Init(PlayerController player)
     {
@@ -13,7 +15,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void StartGame()
     {
-
+        _swarmController.StartAI(_player.gameObject.transform);
     }
 
     public void StopGame()

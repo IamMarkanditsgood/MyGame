@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private LevelCreator _levelCreator;
+    [SerializeField] private CoroutineServices _coroutineServices;
     [SerializeField] private PoolObjectManager _poolObjectManager;
     [SerializeField] private GamePlayManager _gamePlayManager;
 
@@ -17,7 +16,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        InitManagers();
+        InitServices();
+        InitLevel();
         _gamePlayManager.StartGame();
     }
 
@@ -26,10 +26,15 @@ public class LevelManager : MonoBehaviour
         _gamePlayManager.StopGame();
     }
 
-    private void InitManagers()
+    private void InitLevel()
     {
-        _poolObjectManager.InitPoolObjects();
         _levelCreator.CreateLevel();
         _gamePlayManager.Init(_levelCreator.Character);
+    }
+
+    private void InitServices()
+    {
+        _poolObjectManager.Init();
+        _coroutineServices.Init();
     }
 }

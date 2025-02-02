@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         _characterConfig = characterConfig;
 
-        _characterData = _characterDataManager.ConfigureCharacterData(_characterConfig,_characterData);
+        _characterData = _characterDataManager.ConfigureCharacterData(_characterConfig, _characterData);
 
         InitManagers();
         Subscribe();
