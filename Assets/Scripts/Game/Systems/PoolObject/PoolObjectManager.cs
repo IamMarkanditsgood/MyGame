@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
@@ -9,7 +10,7 @@ public class PoolObjectManager : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] private BulletController _bulletPref;
     [SerializeField] private MineController _minePref;
-    [SerializeField] private BasicEnemyController _enemyPref;
+
     [Header("Containers")]
     [SerializeField] private Transform _bulletContainer;
     [SerializeField] private Transform _minesContainer;
@@ -17,11 +18,19 @@ public class PoolObjectManager : MonoBehaviour
 
     private ObjectPool<BulletController> _bullets = new ObjectPool<BulletController>();
     private ObjectPool<MineController> _mines = new ObjectPool<MineController>();
-    private ObjectPool<BasicEnemyController> _enemies = new ObjectPool<BasicEnemyController>();
-
+    
     public ObjectPool<BulletController> Bullets => _bullets;
     public ObjectPool<MineController> Mines => _mines;
-    public ObjectPool<BasicEnemyController> Enemies => _enemies;
+
+    public List<EnemiesPoolObject> enemies = new List<EnemiesPoolObject>();
+
+    [Serializable]
+    public class EnemiesPoolObject
+    {
+        public EnemyType enemyType;
+        public BasicEnemyController enemyPref;
+        public ObjectPool<BasicEnemyController> enemies = new ObjectPool<BasicEnemyController>();
+    }
 
     public void Init()
     {
@@ -32,10 +41,32 @@ public class PoolObjectManager : MonoBehaviour
         InitPoolObjects();
     }
 
+    public BasicEnemyController GetEnemy(EnemyType enemyType)
+    {
+        foreach (var enemyPool in enemies)
+        {
+            if(enemyType == enemyPool.enemyType)
+            {
+                BasicEnemyController enemy = enemyPool.enemies.GetComponent();
+                return enemy;
+            }
+        }
+        Debug.LogWarning("No this type of enemy");
+        return null;
+    }
+
     private void InitPoolObjects()
     {
         _bullets.InitializePool(_bulletPref, _bulletContainer);
         _mines.InitializePool(_minePref, _minesContainer);
-        _enemies.InitializePool(_enemyPref, _enemiesContainer);
+        InitEnemies();
+    }
+
+    private void InitEnemies()
+    {
+        foreach(var enemyPool in enemies)
+        {
+            enemyPool.enemies.InitializePool(enemyPool.enemyPref, _enemiesContainer);
+        }
     }
 }

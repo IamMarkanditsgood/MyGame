@@ -206,10 +206,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletPref: {fileID: 1108050912790989828, guid: 211f7c216e456b4449c87e04ca768de4, type: 3}
   _minePref: {fileID: 2072139935697262225, guid: c96947388752f5c4da219c4efe077d7d, type: 3}
-  _enemyPref: {fileID: -6553700052089216122, guid: 5b9eed0eaada4fc49b9438f9bd532ef8, type: 3}
   _bulletContainer: {fileID: 1313029534}
   _minesContainer: {fileID: 2034709660}
   _enemiesContainer: {fileID: 950333700}
+  enemies:
+  - enemyType: 1
+    enemyPref: {fileID: -6553700052089216122, guid: 5b9eed0eaada4fc49b9438f9bd532ef8, type: 3}
+  - enemyType: 2
+    enemyPref: {fileID: -6553700052089216122, guid: 5d7bdcc1a5303b541842dbfd6c48a6fd, type: 3}
 --- !u!114 &43200067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,11 +228,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _swarmController:
     _player: {fileID: 0}
-    _teleportDistance: 60
+    _teleportDistance: 50
+    _inerSpawnRadius: 25
+    _outerSpawnRadius: 50
     _enemyGroups:
     - EnemyType: 1
       UpdateRate: 0.5
-      UpdateDistance: 50
+      AttackRadius: 100
+    - EnemyType: 2
+      UpdateRate: 1
+      AttackRadius: 100
 --- !u!1 &194808328
 GameObject:
   m_ObjectHideFlags: 0
